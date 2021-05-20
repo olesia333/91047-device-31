@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Olesya Panova](https://up.htmlacademy.ru/htmlcss/31/user/91047).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0).
 
 ---
 
