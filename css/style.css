@@ -1,0 +1,376 @@
+/*Подключение шрифтов*/
+@font-face {
+  font-family: "Gilory";
+  font-style: normal;
+  font-weight: 300;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Gilory"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/gilroylight.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilory";
+  font-style: normal;
+  font-weight: 800;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Gilory"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/gilroyextrabold.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Open Sans"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/opensans.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Open Sans"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/opensanslight.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/opensanslight.woff") format("woff");
+}
+
+/* Цвета */
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-dark-gray: #464646;
+  --basic-gray: #7e7e7e;
+  --basic-light-gray: #e5e5e5;
+  --basic-white: #ffffff;
+
+  --special-yellow: #f0c52e;
+  --special-light-yellow: #f7e296;
+  --special-green: #91c92f;
+  --special-pink: #f6dada;
+
+  /*Есть в макете, но не указаны в палитре*/
+  --special-gray: #f2f2f2;
+  /*Альтернатива opacity*/
+  --special-transparent-white: rgba(255, 255, 255, 0.6);
+  --special-transparent-black: rgba(0, 0, 0, 0.3);
+}
+
+/* Глобальные классы*/
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  color: var(--basic-black);
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  background-image: linear-gradient(0deg, transparent 40%, var(--special-yellow) 40%, var(--special-yellow) 60%, transparent 40%);
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient(0deg, var(--special-yellow) 0%, var(--special-yellow) 100%);
+}
+
+.btn:active {
+  color: var(--special-transparent-black);
+}
+
+.list {
+  list-style: none;
+}
+
+/*Главное меню*/
+
+.main-nav {
+  background-color: var(--special-light-yellow);
+}
+
+.main-nav .link:hover,
+.main-footer .link:hover {
+  opacity: 0.6;
+}
+
+.main-nav .link:active,
+.main-footer .link:active {
+  opacity: 0.3;
+}
+
+/*Форма поиска*/
+
+.search-input {
+  border: none;
+  background-color: transparent;
+}
+
+.search-input::placeholder {
+  opacity: 0.3;
+}
+
+.search-input:hover::placeholder {
+  opacity: 0.6;
+}
+
+.search-input:focus {
+  border-bottom: 2px solid var(--basic-black);
+  outline: none;
+}
+
+.search-btn {
+  text-transform: uppercase;
+  border: 2px solid var(--basic-black);
+  background-color: transparent;
+}
+
+.search-btn:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.search-btn:active {
+  color: var(--special-transparent-white);
+  background-color: var(--basic-black);
+}
+
+/*Пользовательское меню*/
+
+.user-nav-item .link {
+  color: inherit;
+}
+
+/*Меню по сайту*/
+
+.site-nav-link {
+  font-family: "Gilroy", Arial, sans serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.submenu-list {
+  background-color: var(--special-light-yellow);
+}
+
+.submenu-item .link {
+  color: inherit;
+}
+
+/*Лучшие предложения*/
+
+.slide {
+  background-color: transparent;
+}
+
+.slide-title {
+  font-family: "Gilroy", Arial, sans serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.slide-table {
+  font-family: "Gilroy", Arial, sans serif;
+}
+
+.slide-table-title {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.slide-table-content {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+}
+
+/*Ассортимент*/
+
+.category-item {
+  font-family: "Gilroy", Arial, sans serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.category-item .link {
+  color: inherit;
+}
+
+.category-item:active .link {
+  opacity: 0.3;
+}
+
+/*Условия работы*/
+
+.service-container {
+  background-color: var(--basic-light-gray);
+}
+
+.services-nav-active-link,
+.services-nav-active-link:hover,
+.services-nav-active-link:active {
+  color: var(--special-light-yellow);
+  background-image: none;
+  background-color: var(--basic-black);
+}
+
+.service-content {
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+}
+
+.content-title {
+  font-family: "Gilroy", Arial, sans serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+/*Бренды*/
+.brands-item {
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+
+.brands-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/*Раздел информация*/
+.info {
+  line-height: 28px;
+}
+
+.about-us-list {
+  font-family: "Gilroy", Arial, sans serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/*Футер*/
+
+.main-footer {
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+}
+
+.main-footer .link {
+  color:inherit;
+}
+
+/*Навигация в футере*/
+.main-footer-logo-img {
+  fill: var(--special-yellow);
+}
+
+.social-link {
+  opacity: 0.3;
+}
+
+.social-link:hover {
+  opacity: 0.6;
+}
+
+.social-link:active {
+  opacity: 0.1;
+}
+
+/*Модальное окно*/
+
+.modal {
+  background-color: var(--basic-white);
+}
+
+/*Форма обратной связи*/
+.feedback-label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.feedback-name,
+.feedback-mail,
+.feedback-message {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-dark);
+  border: none;
+  background-color: var(--special-gray);
+}
+
+.feedback-name::placeholder,
+.feedback-mail::placeholder,
+.feedback-message::placeholder {
+  opacity: 0.4;
+}
+
+.feedback-name:hover,
+.feedback-mail:hover,
+.feedback-message:hover {
+  background-color: var(--basic-light-gray);
+}
+
+.feedback-name:focus,
+.feedback-mail:focus,
+.feedback-message:focus {
+  background: transparent;
+  outline: 2px solid var(--special-light-yellow);
+}
+
+.feedback-name:invalid,
+.feedback-mail:invalid,
+.feedback-message:invalid {
+  background-color: var(--special);
+  outline: none;
+}
