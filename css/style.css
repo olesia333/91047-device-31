@@ -1,22 +1,22 @@
 /*Подключение шрифтов*/
 @font-face {
-  font-family: "Gilory";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 300;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("Gilory"),
+  src: local("Gilroy"),
        /* Если не получилось, загрузит woff2 */
        url("/fonts/gilroylight.woff2") format("woff2"),
-       /* Если браузер не поддерживает woff2, загрузит woff */
+       /* Если браузер не поддерживает woff2, загрузит woff*/
        url("/fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gilory";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 800;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("Gilory"),
+  src: local("Gilroy"),
        /* Если не получилось, загрузит woff2 */
        url("/fonts/gilroyextrabold.woff2") format("woff2"),
        /* Если браузер не поддерживает woff2, загрузит woff */
@@ -62,6 +62,10 @@
 
   /*Есть в макете, но не указаны в палитре*/
   --special-gray: #f2f2f2;
+  --special-medium-gray: #dcdcdc;
+  --special-alternative-gray: #a6a6a6;
+  --special-alternative-light-gray: #ebebeb;
+  --special-ultra-gray: #d9d9d9;
   /*Альтернатива opacity*/
   --special-transparent-white: rgba(255, 255, 255, 0.6);
   --special-transparent-black: rgba(0, 0, 0, 0.3);
@@ -73,12 +77,20 @@
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+/*Заголовок страницы*/
+.page-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
 }
 
 .link {
@@ -90,32 +102,39 @@
   height: auto;
 }
 
+/*Кнопки*/
+
 .btn {
-  font-family: "Gilroy", Arial, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+.btn-decor {
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.2em;
   color: var(--basic-black);
-  text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
 
   background-color: transparent;
   background-image: linear-gradient(0deg, transparent 40%, var(--special-yellow) 40%, var(--special-yellow) 60%, transparent 40%);
-  border: none;
 }
 
-.btn:hover,
-.btn:focus {
+.btn-decor:hover,
+.btn-decor:focus {
   background-image: linear-gradient(0deg, var(--special-yellow) 0%, var(--special-yellow) 100%);
 }
 
-.btn:active {
+.btn-decor:active {
   color: var(--special-transparent-black);
 }
 
-.list {
+.reset-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -125,13 +144,12 @@
   background-color: var(--special-light-yellow);
 }
 
-.main-nav .link:hover,
-.main-footer .link:hover {
+/*Логотип в шапке*/
+.main-header-logo:hover {
   opacity: 0.6;
 }
 
-.main-nav .link:active,
-.main-footer .link:active {
+.main-header-logo:active {
   opacity: 0.3;
 }
 
@@ -172,19 +190,30 @@
 }
 
 /*Пользовательское меню*/
-
-.user-nav-item .link {
+.user-nav-link {
   color: inherit;
+}
+
+.user-nav-link:hover {
+  opacity: 0.6;
+}
+
+.user-nav-link:active {
+  opacity: 0.3;
+}
+
+.user-nav-link-logout {
+  opacity: 0.3;
 }
 
 /*Меню по сайту*/
 
 .site-nav-link {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: inherit;
 }
@@ -193,8 +222,18 @@
   background-color: var(--special-light-yellow);
 }
 
-.submenu-item .link {
+.submenu-link {
   color: inherit;
+}
+
+.site-nav-link:hover,
+.submenu-link:hover {
+  opacity: 0.6;
+}
+
+.site-nav-link:active,
+.submenu-link:active {
+  opacity: 0.3;
 }
 
 /*Лучшие предложения*/
@@ -204,14 +243,14 @@
 }
 
 .slide-title {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
 }
 
 .slide-table {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
 }
 
 .slide-table-title {
@@ -231,18 +270,18 @@
 /*Ассортимент*/
 
 .category-item {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
 }
 
-.category-item .link {
+.category-link {
   color: inherit;
 }
 
-.category-item:active .link {
+.category-link:hover {
   opacity: 0.3;
 }
 
@@ -267,7 +306,7 @@
 }
 
 .content-title {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -291,10 +330,232 @@
 }
 
 .about-us-list {
-  font-family: "Gilroy", Arial, sans serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+}
+
+/*Каталог*/
+
+.brands-item {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+}
+
+.breadcrumbs-link,
+.breadcrumbs-link-active {
+  color: inherit;
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.1;
+}
+
+/*Сортировка*/
+.sorting {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  background-color: var(--basic-light-gray);
+}
+
+.sorting-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sorting-link {
+  color: inherit;
+  opacity: 0.3;
+}
+
+.sorting-link:hover {
+  opacity: 0.6;
+}
+
+.sorting-link:active {
+  opacity: 1;
+}
+
+.sorting-link-active,
+.sorting-link-active:hover,
+.sorting-link-active:active {
+  opacity: 1;
+}
+
+.sorting-order-link {
+  opacity: 0.2;
+}
+
+.sorting-order-link:hover {
+  opacity: 0.4;
+}
+
+.sorting-order-link:active {
+  opacity: 1;
+}
+
+.sorting-order-link-active,
+.sorting-order-link-active:active {
+  opacity: 1;
+}
+
+/*Фильтр*/
+
+.filter {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  background-color: var(--basic-light-gray);
+}
+
+.filter-header {
+  background: var(--special-medium-gray);
+}
+
+.filter-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.filter-group {
+  border: none;
+}
+
+.filter-subtitle {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.filter-count {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.filter-input:hover + .filter-label {
+  opacity: 0.6;
+}
+
+.filter-input:active + .filter-label {
+  opacity: 1;
+}
+
+/*Карточки товаров*/
+
+.product {
+  color: var(--basic-black);
+}
+
+.product-link {
+  color: inherit;
+}
+
+.product-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+}
+
+.product-price {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+/*Кнопка сравнить*/
+.product-btn-compare {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: inherit;
+
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.product-btn-compare:hover,
+.product-btn:focus {
+  opacity: 1;
+}
+
+.product-btn-compare:active {
+  opacity: 0.2;
+}
+
+/*Пагинация*/
+
+.pagination {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background: var(--special-alternative-light-gray);
+}
+
+.pagination-prev,
+.pagination-next {
+  letter-spacing: 0.1em;
+  color: inherit;
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+  background: var(--special-ultra-gray);
+}
+
+.pagination-prev:active,
+.pagination-next:active {
+  color: var(--special-transparent-black);
+  background: var(--special-ultra-gray);
+}
+
+.pagination-link {
+  letter-spacing: 0.1em;
+  color: inherit;
+  opacity: 0.3;
+}
+
+.pagination-link:hover {
+  opacity: 0.6;
+}
+
+.pagination-link:active {
+  opacity: 1;
+}
+
+.pagination-link-current,
+.pagination-link-current:hover,
+.pagination-link-current:focus,
+.pagination-link-current:active {
+  color: inherit;
+  background: transparent;
+  opacity: 1;
 }
 
 /*Футер*/
@@ -304,16 +565,70 @@
   background-color: var(--basic-dark);
 }
 
-.main-footer .link {
-  color:inherit;
-}
-
-/*Навигация в футере*/
+/*Логотип*/
 .main-footer-logo-img {
   fill: var(--special-yellow);
 }
 
+.main-footer-logo:hover {
+  opacity: 0.6;
+}
+
+.main-footer-logo:active {
+  opacity: 0.3;
+}
+
+/*Пользовательское меню в футере*/
+.footer-user-nav {
+  color:var(--basic-white);
+}
+
+.footer-user-nav-link {
+  color:inherit;
+  opacity: 0.7;
+}
+
+.footer-user-nav-link:hover {
+  opacity: 1;
+}
+
+.footer-user-nav-link:active {
+  opacity: 0.3;
+}
+
+/*Навигация по страницам сайта*/
+
+.footer-site-nav-item {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:var(--basic-white);
+}
+
+.footer-site-nav-link {
+  color: inherit;
+}
+
+.footer-site-nav-link:hover {
+  opacity: 0.6;
+}
+
+.footer-site-nav-link:active {
+  opacity: 0.3;
+}
+
+/*Контакты*/
+.footer-contact-link {
+  color:inherit;
+}
+
+/*Социальные сети*/
+
 .social-link {
+  color: inherit;
   opacity: 0.3;
 }
 
@@ -325,6 +640,15 @@
   opacity: 0.1;
 }
 
+/*Логотип HTML Academy*/
+.footer-logo-academy:hover {
+  opacity: 0.6;
+}
+
+.footer-logo-academy:active {
+  opacity: 0.3;
+}
+
 /*Модальное окно*/
 
 .modal {
@@ -333,7 +657,7 @@
 
 /*Форма обратной связи*/
 .feedback-label {
-  font-family: "Gilroy", Arial, sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
