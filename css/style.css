@@ -110,7 +110,7 @@
   border: none;
 }
 
-.btn-decor {
+.btn-gradient {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -123,12 +123,12 @@
   background-image: linear-gradient(0deg, transparent 40%, var(--special-yellow) 40%, var(--special-yellow) 60%, transparent 40%);
 }
 
-.btn-decor:hover,
-.btn-decor:focus {
+.btn-gradient:hover,
+.btn-gradient:focus {
   background-image: linear-gradient(0deg, var(--special-yellow) 0%, var(--special-yellow) 100%);
 }
 
-.btn-decor:active {
+.btn-gradient:active {
   color: var(--special-transparent-black);
 }
 
