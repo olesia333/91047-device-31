@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="container main-header">
       <nav class="main-nav">
         <a class="link main-header-logo" href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="164"
+          <svg class="main-header-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="164"
           height="35">
           <path
             d="m0.35 0.7v33.6h13.532a15.723 15.723 0 0 0 11.72-4.824 16.464 16.464 0 0 0 4.712-11.976 16.465 16.465 0 0 0-4.712-11.976 15.723 15.723 0 0 0-11.72-4.824zm7.733 26.208v-18.819h5.8a8.648 8.648 0 0 1 6.5 2.568 9.412 9.412 0 0 1 2.489 6.84 9.41 9.41 0 0 1-2.489 6.84 8.646 8.646 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3h-12.086v-5.567h13.291v-7.389h-21.024v33.6h21.265v-7.392h-13.532v-5.952zm36.343 13.344 11.019-33.6h-8.458l-7.491 24.72-7.491-24.72h-8.457l11.019 33.6zm14.4 0h7.733v-33.6h-7.733zm38.615-1.416a15.514 15.514 0 0 0 6.041-5.688l-6.67-3.84a7.488 7.488 0 0 1-3.165 3.024 9.874 9.874 0 0 1-4.664 1.1 9.594 9.594 0 0 1-7.177-2.736 9.907 9.907 0 0 1-2.682-7.248 9.908 9.908 0 0 1 2.682-7.248 9.594 9.594 0 0 1 7.177-2.736 9.914 9.914 0 0 1 4.64 1.08 7.6 7.6 0 0 1 3.189 3.048l6.67-3.84a15.881 15.881 0 0 0-6.09-5.688 17.419 17.419 0 0 0-8.409-2.088 17.12 17.12 0 0 0-17.592 17.472 17.12 17.12 0 0 0 17.589 17.476 17.519 17.519 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085v-5.567h13.29v-7.389h-21.022v33.6h21.264v-7.392h-13.532v-5.952z" />
          </svg>
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-          <label for="search">Поиск</label>
+          <label class="visually-hidden" for="search">Поиск</label>
           <input class="search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
           <button class="search-btn" type="submit">Найти</button>
         </form>
@@ -76,116 +76,122 @@
       </nav>
     </header>
     <main class="wrapper">
-      <h1 class="page-title">Моноподы для селфи</h1>
-      <ul class="reset-list breadcrumbs-list">
-        <li class="breadcrumbs-item">
-          <a class="link breadcrumbs-link" href="#">Главная</a>
-        </li>
-        <li lass="breadcrumbs-item">
-          <a class="link breadcrumbs-link" href="#">Каталог товаров</a>
-        </li>
-        <li lass="breadcrumbs-item">
-          <a class="link breadcrumbs-link-active">Моноподы для селфи</a>
-        </li>
-      </ul>
-      <div>
+      <div class="container">
+        <h1 class="page-title">Моноподы для селфи</h1>
+        <ul class="reset-list breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a class="link breadcrumbs-link" href="#">Главная</a>
+          </li>
+          <li lass="breadcrumbs-item">
+            <a class="link breadcrumbs-link" href="#">Каталог товаров</a>
+          </li>
+          <li lass="breadcrumbs-item">
+            <a class="link breadcrumbs-link-active">Моноподы для селфи</a>
+          </li>
+        </ul>
+      </div>
+      <div class="catalog-wrapper">
         <section class="sorting">
-          <h2 class="sorting-title">Сортировка</h2>
-          <ul class="reset-list sorting-list">
-            <li class="sorting-list-item">
-              <a class="link sorting-link sorting-link-active">По цене</a>
-            </li>
-            <li class="sorting-list-item">
-              <a class="link sorting-link" href="#">По типу</a>
-            </li>
-            <li class="sorting-list-item">
-              <a class="link sorting-link" href="#">По популярности</a>
-            </li>
-          </ul>
-          <ul class="reset-list sorting-order-list">
-            <li class="sorting-order-item">
-              <a class="link sorting-link sorting-order-link" href="#">
-                <span>По возрастанию</span>
-              </a>
-            </li>
-            <li class="sorting-order-item">
-              <a class="link sorting-link sorting-order-link sorting-order-link-active">
-                <span>По убыванию</span>
-              </a>
-            </li>
-          </ul>
+          <div class="sorting-wrapper">
+            <h2 class="sorting-title">Сортировка</h2>
+            <ul class="reset-list sorting-list">
+              <li class="sorting-list-item">
+                <a class="link sorting-link sorting-link-active">По цене</a>
+              </li>
+              <li class="sorting-list-item">
+                <a class="link sorting-link" href="#">По типу</a>
+              </li>
+              <li class="sorting-list-item">
+                <a class="link sorting-link" href="#">По популярности</a>
+              </li>
+            </ul>
+            <ul class="reset-list sorting-order-list">
+              <li class="sorting-order-item">
+                <a class="link sorting-link sorting-order-link" href="#">
+                  <span>По возрастанию</span>
+                </a>
+              </li>
+              <li class="sorting-order-item">
+                <a class="link sorting-link sorting-order-link sorting-order-link-active">
+                  <span>По убыванию</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="filter">
           <div class="filter-header">
             <h2 class="filter-title">Фильтр</h2>
           </div>
-          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter-group filter-count">
-              <legend class="filter-subtitle">Стоимость</legend>
-              <div>
-                <div>Прогресс-бар</div>
-                <button type="button">
-                  <span>Минимум</span>
-                </button>
-                <button type="button">
-                  <span>Максимум</span>
-                </button>
+          <div class="filter-form-wrapper">
+            <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+              <fieldset class="filter-group filter-count">
+                <legend class="filter-subtitle">Стоимость</legend>
                 <div>
-                  <label>от <input name="min-price" type="text" value="0"></label>
-                  <label>до <input name="max-price" type="text" value="5000"></label>
+                  <div>Прогресс-бар</div>
+                  <button type="button">
+                    <span>Минимум</span>
+                  </button>
+                  <button type="button">
+                    <span>Максимум</span>
+                  </button>
+                  <div>
+                    <label>от <input name="min-price" type="text" value="0"></label>
+                    <label>до <input name="max-price" type="text" value="5000"></label>
+                  </div>
                 </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group filter-color">
-              <legend class="filter-subtitle">Цвет</legend>
-              <ul class="reset-list filter-list">
-                <li class="filter-item">
-                  <input class="filter-input" type="checkbox" name="black"
-                    id="filter-black" checked>
-                  <label class="filter-label" for="filter-black">Черный</label>
-                </li>
-                <li class="filter-item">
-                  <input class="filter-input" type="checkbox" name="white"
-                    id="filter-white">
-                  <label class="filter-label" for="filter-white">Белый</label>
-                </li>
-                <li class="filter-color-item">
-                  <input tclass="filter-input" type="checkbox" name="blue"
-                    id="filter-blue" checked>
-                  <label class="filter-label" for="filter-blue">Синий</label>
-                </li>
-                <li class="filter-item">
-                  <input class="filter-input" type="checkbox" name="red"
-                    id="filter-red" checked>
-                  <label class="filter-label" for="filter-red">Красный</label>
-                </li>
-                <li class="filter-item">
-                  <input class="filter-input" type="checkbox" name="pink"
-                    id="filter-pink">
-                  <label class="filter-label" for="filter-pink">Розовый</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend class="filter-subtitle">Bluetooth</legend>
-              <ul class="reset-list filter-list">
-                <li class="filter-item">
-                  <input class="filter-input" type="radio" name="bluetooth"
-                    id="filter-bluetooth-yes" value="yes" checked>
-                  <label for="filter-bluetooth-yes">Есть</label>
-                </li>
-                <li class="filter-item">
-                  <input class="filter-input" type="radio" name="bluetooth"
-                    id="filter-bluetooth-no" value="no">
-                  <label for="filter-bluetooth-no">Нет</label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="btn btn-gradient" type="submit">Показать</button>
-          </form>
+              </fieldset>
+              <fieldset class="filter-group filter-color">
+                <legend class="filter-subtitle">Цвет</legend>
+                <ul class="reset-list filter-list">
+                  <li class="filter-item">
+                    <input class="filter-input" type="checkbox" name="black"
+                      id="filter-black" checked>
+                    <label class="filter-label" for="filter-black">Черный</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-input" type="checkbox" name="white"
+                      id="filter-white">
+                    <label class="filter-label" for="filter-white">Белый</label>
+                  </li>
+                  <li class="filter-color-item">
+                    <input tclass="filter-input" type="checkbox" name="blue"
+                      id="filter-blue" checked>
+                    <label class="filter-label" for="filter-blue">Синий</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-input" type="checkbox" name="red"
+                      id="filter-red" checked>
+                    <label class="filter-label" for="filter-red">Красный</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-input" type="checkbox" name="pink"
+                      id="filter-pink">
+                    <label class="filter-label" for="filter-pink">Розовый</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter-group">
+                <legend class="filter-subtitle">Bluetooth</legend>
+                <ul class="reset-list filter-list">
+                  <li class="filter-item">
+                    <input class="filter-input" type="radio" name="bluetooth"
+                      id="filter-bluetooth-yes" value="yes" checked>
+                    <label for="filter-bluetooth-yes">Есть</label>
+                  </li>
+                  <li class="filter-item">
+                    <input class="filter-input" type="radio" name="bluetooth"
+                      id="filter-bluetooth-no" value="no">
+                    <label for="filter-bluetooth-no">Нет</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="btn btn-gradient" type="submit">Показать</button>
+            </form>
+          </div>
         </section>
         <section class="catalog">
-          <h2>Список товаров</h2>
+          <h2 class="visually-hidden">Список товаров</h2>
           <ul class="reset-list catalog-list">
             <li class="catalog-item">
               <article class="product">
@@ -276,7 +282,7 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-nav">
+      <div class="container main-footer-container">
         <a class="link main-footer-logo">
           <svg class="main-footer-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="164"
           height="35">
@@ -298,9 +304,7 @@
             <a class="link footer-user-nav-link" href="#">Корзина</a>
           </li>
         </ul>
-      </div>
-      <div class="footer-wrapper">
-        <p class="footer-contact">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+        <p class="footer-contact-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         <ul class="reset-list footer-site-nav">
           <li class="footer-site-nav-item">
             <a class="link footer-site-nav-link" href="#">Доставка</a>
@@ -312,27 +316,27 @@
             <a class="link footer-site-nav-link" href="#">Контакты</a>
           </li>
         </ul>
-        <p class="footer-contact">
+        <p class="footer-contact-tel">
           <a class="link footer-contact-link" href="tel:+78005558628">Тел.: +7 800 555-86-28</a>
         </p>
+        <section class="social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="reset-list social-list">
+            <li class="social-item">
+              <a class="link social-link social-link-fb" href="#"><span>Facebook</span></a>
+            </li>
+            <li class="social-item">
+              <a class="link social-link social-link-insta" href="#"><span>Instagram</span></a>
+            </li>
+            <li class="social-item">
+              <a class="link social-link social-link-tw" href="#"><span>Twitter</span></a>
+            </li>
+          </ul>
+        </section>
+        <a class="link footer-logo-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img class="img" src="img/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTMLacademy">
+        </a>
       </div>
-      <section class="social">
-        <h2>Социальные сети</h2>
-        <ul class="reset-list social-list">
-          <li class="social-item">
-            <a class="link social-link social-link-fb" href="#"><span>Facebook</span></a>
-          </li>
-          <li class="social-item">
-            <a class="link social-link social-link-insta" href="#"><span>Instagram</span></a>
-          </li>
-          <li class="social-item">
-            <a class="link social-link social-link-tw" href="#"><span>Twitter</span></a>
-          </li>
-        </ul>
-      </section>
-      <a class="link footer-logo-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img class="img" src="img/logo-htmlacademy.svg" width="115" height="33" alt="Логотип HTMLacademy">
-      </a>
     </footer>
   </body>
 </html>
