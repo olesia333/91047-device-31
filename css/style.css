@@ -307,49 +307,48 @@
 }
 
 /*Лучшие предложения*/
+.best-offer {
+  margin-bottom: 76px;
+}
 
 .slide {
-  max-height: 506px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
-  grid-template-rows: repeat(4, auto);
-  align-items: start;
-  justify-self: start;
-
   background-color: transparent;
   box-sizing: border-box;
 }
 
+.slide-img {
+  grid-column: 1;
+  text-align: right;
+}
+
+.slide-text {
+  grid-column: 2;
+  padding-right: 60px;
+}
+
 .slide-title {
-  grid-column: 7/span 5;
   margin: 0;
-  padding-top: 110px;
+  margin-bottom: 30px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
 }
 
-.slide-img {
-  order:-1;
-  grid-column: 1/span 6;
-  grid-row: 1/span 4;
-  text-align: center;
-}
-
 .slide-description {
-  grid-column: 7/span 4;
+  margin-bottom: 55px;
 }
 
 .slide-btn {
-  grid-column: 7/span 3;
-  align-self: start;
-  justify-self: start;
+ padding-left: 44px;
+ padding-right: 42px;
 }
 
 .slide-table {
-  grid-column: 7/span 5;
+  padding-top: 60px;
   font-family: "Gilroy", "Arial", sans-serif;
 }
 
@@ -368,9 +367,12 @@
 }
 
 /*Ассортимент*/
+.category {
+  margin-bottom: 49px;
+}
+
 .category-list {
   display: grid;
-  align-items: start;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 40px;
 }
@@ -395,13 +397,14 @@
 /*Условия работы*/
 
 .service {
+  margin-bottom: 90px;
   background-color: var(--basic-light-gray);
 }
 
 .service-container {
   display: grid;
   align-items: start;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 200px 800px;
   grid-column-gap: 40px;
 }
 
@@ -414,11 +417,11 @@
 }
 
 .service-nav {
-  grid-column: 1/5;
+  grid-column: 1;
 }
 
 .service-content {
-  grid-column: 5/12;
+  grid-column: 2;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.1em;
@@ -433,8 +436,13 @@
 }
 
 /*Бренды*/
+.brands {
+  margin-bottom: 90px;
+}
+
 .brands-list {
   /*Доработаю на флексах*/
+  /*Флексы потому что ширина у всех логотипов разная*/
   display: flex;
 }
 
@@ -454,8 +462,12 @@
   align-items: start;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
-
+  margin-bottom: 86px;
   line-height: 28px;
+}
+
+.about-us {
+  grid-column: 1;
 }
 
 .about-us-list {
@@ -463,6 +475,10 @@
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
+}
+
+.contacts {
+  grid-column: 2;
 }
 
 /*Каталог*/
