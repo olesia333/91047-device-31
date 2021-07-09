@@ -181,12 +181,15 @@
   grid-template-rows: auto auto 1fr;
   align-items: start;
   padding: 0 60px;
-  padding-bottom: 50px;
   background-color: var(--special-light-yellow);
 }
 
 .index-main-nav {
   min-height: 300px;
+}
+
+.catalog-main-nav {
+  padding-bottom: 30px;
 }
 
 /*Логотип в шапке*/
@@ -251,10 +254,46 @@
 
 /*Пользовательское меню*/
 .user-nav {
-  /*flex чтобы посмотреть grid-row-gap, доработаю в след задании*/
-  display: flex;
   grid-row: 2/2;
-  grid-column: 7/-1;
+  grid-column: 6/-1;
+  display: flex;
+}
+
+.user-nav-item:not(:last-child) {
+  margin-right: 41px;
+}
+
+.user-nav-item:first-child {
+  margin-right: 0;
+}
+
+.user-nav-item-compare {
+  padding-left: 26px;
+}
+
+.user-nav-item-cart {
+  padding-left: 25px;
+}
+
+.account {
+  margin-right: 0;
+  flex-grow: 1;
+}
+
+.account-list {
+  display: flex;
+}
+
+.account-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.account-login {
+  padding-left: 24px;
+}
+
+.account-profile {
+  padding-left: 24px;
 }
 
 .user-nav-link {
@@ -275,10 +314,25 @@
 
 /*Меню по сайту*/
 .site-nav {
-   /*flex чтобы посмотреть grid-row-gap, доработаю в след задании*/
-  display: flex;
   grid-row: 3/3;
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.site-nav-item:first-child {
+  flex-grow: 1;
+}
+
+.site-nav-item:nth-last-child(2) {
+  margin-left: 35px;
+}
+
+.site-nav-item:last-child {
+  margin-left: 100px;
 }
 
 .site-nav-link {
@@ -291,8 +345,51 @@
   color: inherit;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-link {
+  padding-bottom: 20px;
+}
+
 .submenu-list {
+  z-index: 3;
+  width: 1160px;
+  height: 146px; /*фиксированная высота для распределения по горизонтали*/
+  padding-left: 60px;
+  padding-right: 60px;
+  /*padding-bottom: 46px;*/
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  padding-top: 12px;
+  align-content: start;
+
   background-color: var(--special-light-yellow);
+  box-sizing: border-box;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown:hover .submenu-list,
+.dropdown:focus-within .submenu-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu-item:not(:last-child) {
+  margin-bottom: 16px;
+  margin-right: 64px;
+}
+
+.submenu-item:last-child {
+  flex-basis: 100%;
 }
 
 .submenu-link {
@@ -351,11 +448,14 @@
 }
 
 .slide-table {
-  padding-top: 60px;
+  margin-top: 60px;
+  border-collapse: collapse;
   font-family: "Gilroy", "Arial", sans-serif;
 }
 
 .slide-table-title {
+  padding-right: 63px;
+  padding-top: 15px;
   font-weight: 300;
   font-size: 13px;
   line-height: 15px;
@@ -368,6 +468,10 @@
   line-height: 42px;
   letter-spacing: 0.1em;
 }
+
+/* .slide-table-content:not(:first-child) {
+  padding-left: 60px;
+}*/
 
 /*Ассортимент*/
 .category {
@@ -407,8 +511,9 @@
 .service-container {
   display: grid;
   align-items: start;
-  grid-template-columns: 200px 800px;
-  grid-column-gap: 40px;
+  grid-template-columns: 284px 1fr;
+  grid-column-gap: 116px;
+  padding-bottom: 68px;
 }
 
 .services-nav-active-link,
@@ -423,6 +528,10 @@
   grid-column: 1;
 }
 
+.services-nav-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .service-content {
   grid-column: 2;
   font-size: 15px;
@@ -431,11 +540,18 @@
 }
 
 .content-title {
+  margin: 0;
+  margin-bottom: 40px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
+}
+
+.content-text {
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 /*Бренды*/
@@ -444,8 +560,10 @@
 }
 
 .brands-list {
-  /*Флексы потому что ширина у всех логотипов разная*/
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .brands-item {
@@ -464,23 +582,37 @@
   align-items: start;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
-  margin-bottom: 86px;
+  margin-bottom: 71px;
+  padding-top: 50px;
   line-height: 28px;
 }
 
 .about-us {
   grid-column: 1;
+  padding-right: 85px;
 }
 
 .about-us-list {
+  padding-top: 24px;
+  margin-bottom: 70px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
 }
 
+.about-us-list-item {
+  margin-bottom: 14px;
+  padding-left: 32px;
+}
+
 .contacts {
   grid-column: 2;
+}
+
+.contacts-link {
+  display: block;
+  margin-bottom: 72px;
 }
 
 /*Каталог*/
@@ -868,9 +1000,8 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 40px;
   grid-template-rows: repeat(4, auto);
-  align-items: start;
   padding-top: 46px;
-  padding-bottom: 64px;
+  margin-bottom: 72px;
 }
 
 /*Логотип*/
@@ -893,11 +1024,39 @@
 
 /*Пользовательское меню в футере*/
 .footer-user-nav {
-  grid-column: 3/-1;
+  grid-column: 5/15;
   grid-row: 1;
   display: flex;
   justify-content: flex-end;
   color:var(--basic-white);
+}
+
+.footer-user-nav-item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.footer-account-list {
+  display: flex;
+}
+
+.footer-account-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer-account-login {
+  padding-left: 24px;
+}
+
+.footer-account-profile {
+  padding-left: 24px;
+}
+
+.footer-nav-item-compare {
+  padding-left: 26px;
+}
+
+.footer-nav-item-cart {
+  padding-left: 25px;
 }
 
 .footer-user-nav-link {
@@ -917,14 +1076,19 @@
 .footer-contact-address {
   grid-row: 3;
   grid-column: 1/5;
+  padding-top: 20px;
+  padding-right: 50px;
 }
 
 /*Навигация по страницам сайта*/
 
 .footer-site-nav {
   grid-row: 3;
-  grid-column: 5/10;
+  grid-column: 5/11;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 33px;
 }
 
 .footer-site-nav-item {
@@ -935,6 +1099,10 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color:var(--basic-white);
+}
+
+.footer-site-nav-item:not(:first-child) {
+  margin-left: 35px;
 }
 
 .footer-site-nav-link {
@@ -954,6 +1122,8 @@
 .footer-contact-tel {
   grid-row: 3;
   grid-column: -1/span 2;
+  margin: 0;
+  padding-top: 35px;
 }
 
 .footer-contact-link {
@@ -963,12 +1133,18 @@
 /*Социальные сети*/
 
 .social {
-  grid-column: 5/10;
+  grid-column: 5/11;
   grid-row: 4;
 }
 
 .social-list {
   display: flex;
+  justify-content: center;
+  padding-top: 38px;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 20px;
 }
 
 .social-link {
@@ -988,6 +1164,9 @@
 .footer-logo-academy {
   grid-row: 4;
   grid-column: -1/span 2;
+  padding-top: 32px;
+  padding-left: 40px;
+
 }
 
 .footer-logo-academy:hover {

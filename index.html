@@ -26,19 +26,23 @@
           <button class="search-btn" type="submit">Найти</button>
         </form>
         <ul class="reset-list user-nav">
-          <li class="user-nav-item">
-            <a class="link user-nav-link" href="#">Войти</a>
+          <li class="user-nav-item account">
+            <ul class="reset-list account-list">
+              <li class="account-item account-login">
+                <a class="link user-nav-link" href="#">Войти</a>
+              </li>
+            </ul>
           </li>
-          <li class="user-nav-item">
+          <li class="user-nav-item user-nav-item-compare">
             <a class="link user-nav-link" href="#">Сравнить</a>
           </li>
-          <li class="user-nav-item">
+          <li class="user-nav-item user-nav-item-cart">
             <a class="link user-nav-link" href="#">Корзина</a>
           </li>
         </ul>
         <ul class="reset-list site-nav">
           <li class="site-nav-item dropdown">
-            <a class="link site-nav-link" href="catalog.html">Каталог товаров</a>
+            <a class="link site-nav-link dropdown-link" href="catalog.html">Каталог товаров</a>
             <ul class="reset-list submenu-list">
               <li class="submenu-item">
                 <a class="link submenu-link" href="#">Виртуальная реальность</a>
@@ -180,15 +184,15 @@
           <ul class="reset-list service-content">
             <li class="service-content-item">
               <h3 class="content-title" id="delivery">Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p class="content-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="service-content-item">
+            <li class="content-item" style="display:none">
               <h3 class="content-title" id="guarantee">Гарнатия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый Товар, не дом, конечно же.</p>
+              <p class="content-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый Товар, не дом, конечно же.</p>
             </li>
-            <li class="service-content-item">
+            <li class="content-item" style="display:none">
               <h3 class="content-title" id="credit">Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <p class="content-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -220,8 +224,8 @@
       <div class="container info">
         <section class="about-us">
           <h2 class="content-title">О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <p class="content-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="content-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="reset-list about-us-list">
             <li class="about-us-list-item">Деловые Линии</li>
             <li class="about-us-list-item">Автотрейдинг</li>
@@ -231,8 +235,8 @@
         </section>
         <section class="contacts">
           <h2 class="content-title">Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <a class="link" href="#">
+          <p class="content-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <a class="link contacts-link" href="#">
             <img class="img" src="img/map.jpg" width="560" height="222" alt="Карта офиса: наб. Реки Карповки, 5 корпус П, Санкт-Петербург">
           </a>
           <p><a class="link btn btn-gradient" href="#">Напишите нам</a></p>
@@ -250,10 +254,14 @@
         </a>
         <ul class="reset-list footer-user-nav">
           <li class="footer-user-nav-item">
-            <a class="link footer-user-nav-link" href="#">Войти</a>
+            <ul class="reset-list footer-account-list">
+              <li class="account-item">
+                <a class="link footer-user-nav-link footer-account-login" href="#">Войти</a>
+              </li>
+            </ul>
           </li>
-          <li class="footer-user-nav-item">
-            <a class="link footer-user-nav-link" href="#">Сравнить</a>
+          <li class="footer-user-nav-item footer-nav-item-compare">
+            <a class="link footer-user-nav-link footer-nav-item-cart" href="#">Сравнить</a>
           </li>
           <li class="footer-user-nav-item">
             <a class="link footer-user-nav-link" href="#">Корзина</a>
