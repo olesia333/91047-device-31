@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="container main-header index-header">
-      <nav class="main-nav index-main-nav">
+    <header class="container main-header main-index-header">
+      <nav class="main-nav">
         <a class="link main-header-logo">
           <svg class="main-header-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35" width="164"
             height="35">
@@ -76,90 +76,80 @@
         </ul>
       </nav>
     </header>
-    <main class="wrapper">
+    <main class="main-wrapper">
       <h1 class="visually-hidden">Интернет-магазин гаджетов Device</h1>
-      <section class="best-offer container">
+      <section class="container best-offer">
         <h2 class="visually-hidden">Лучшие предложения</h2>
-        <ol class="reset-list pagination-slider">
-          <li class="pagination-slider-item slider-item">
-            <button class="slider-item-pagination button-active" type="button">
-            <span class="visually-hidden">Первый слайд</span>
-            </button>
-          </li>
-          <li class="pagination-slider-item slider-item">
-            <button class="slider-item-pagination" type="button">
-            <span class="visually-hidden">Второй слайд</span>
-            </button>
-          </li>
-          <li class="pagination-slider-item slider-item">
-            <button class="slider-item-pagination" type="button">
-            <span class="visually-hidden">Третий слайд</span>
-            </button>
-          </li>
-        </ol>
-        <ul class="reset-list slider">
-          <li class="slide slide-quadrocopter">
-            <div class="slide-img">
-              <img class="img" src="img/content/quadrocopter.png" width="526" height="334" alt="Квадрокоптер с лопастями черного цвета и белым базисом">
-            </div>
-            <div class="slide-text">
-              <h3 class="slide-title">Порхает как бабочка, жалит как пчела!</h3>
-              <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-              </p>
-              <a class="link btn btn-gradient slide-btn" href="#">Подробнее</a>
-              <table class="slide-table">
-                <tr>
-                  <td class="slide-table-content">800 м</td>
-                  <td class="slide-table-content">50 м</td>
-                </tr>
-                <tr>
-                  <th class="slide-table-title">Дальность полета</th>
-                  <th class="slide-table-title">Радиус поражения</th>
-                </tr>
-              </table>
-            </div>
-          </li>
-          <li class="slide slide slide-firbit">
-            <div class="slide-img">
-              <img class="img" src="img/content/fitbit.png" width="345" height="485" alt="Черный фитнес-браслет с маленьким монохромным дисплеем и кнопкой сбоку">
-            </div>
-            <dev class="slide-text">
-              <h3 class="slide-title">Худеем правильно!</h3>
-              <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="link btn btn-gradient slide-btn" href="#">Подробнее</a>
-              <table class="slide-table">
-                <tr class="slide-table-content">
-                  <td>48 часов</td>
-                </tr>
-                <tr>
-                  <th class="slide-table-title">Без подзарядки</th>
-                </tr>
-              </table>
-            </dev>
-          </li>
-          <li class="slide slide slide-stick">
-            <div class="slide-img">
-              <img class="img" src="img/content/selfie-stick.png" width="384" height="486" alt="Черная селфи-палка с синими деталями и розовым креплением">
-            </div>
-            <div class="slide-text">
-              <h3 class="slide-title">Делай селфи, <br>как Бен Стиллер!</h3>
-              <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="link  btn-gradient slide-btn" href="#">Подробнее</a>
-              <table class="slide-table">
-                <tr class="slide-table-content">
-                  <td>8,5 м</td>
-                  <td>5 кг</td>
-                  <td>Карбон</td>
-                </tr>
-                <tr>
-                  <th class="slide-table-title">Длина палки</th>
-                  <th class="slide-table-title">Вес палки</th>
-                  <th class="slide-table-title">Материал</th>
-                </tr>
-              </table>
-            </div>
-          </li>
-        </ul>
+        <div class="slider">
+          <ul class="reset-list slider-list">
+            <li class="slide-item slide slide-stick">
+              <div class="slide-img">
+                <img class="img" src="img/content/selfie-stick.png" width="384" height="486" alt="Черная селфи-палка с синими деталями и розовым креплением">
+              </div>
+              <div class="slide-text">
+                <h3 class="slide-title">Делай селфи, <br>как Бен Стиллер!</h3>
+                <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+                <a class="link  btn-gradient slide-btn" href="#">Подробнее</a>
+                <table class="slide-table">
+                  <tr class="slide-table-content">
+                    <td>8,5 м</td>
+                    <td>5 кг</td>
+                    <td>Карбон</td>
+                  </tr>
+                  <tr>
+                    <th class="slide-table-title">Длина палки</th>
+                    <th class="slide-table-title">Вес палки</th>
+                    <th class="slide-table-title">Материал</th>
+                  </tr>
+                </table>
+              </div>
+            </li>
+            <li class="slide-item slide slide-fitbit">
+              <div class="slide-img">
+                <img class="img" src="img/content/fitbit.png" width="345" height="485" alt="Черный фитнес-браслет с маленьким монохромным дисплеем и кнопкой сбоку">
+              </div>
+              <div class="slide-text">
+                <h3 class="slide-title">Худеем<br>  правильно!</h3>
+                <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы <br> не пропускать занятия и соблюдать диету.</p>
+                <a class="link btn btn-gradient slide-btn" href="#">Подробнее</a>
+                <table class="slide-table">
+                  <tr class="slide-table-content">
+                    <td>48 часов</td>
+                  </tr>
+                  <tr>
+                    <th class="slide-table-title">Без подзарядки</th>
+                  </tr>
+                </table>
+              </div>
+            </li>
+            <li class="slide-item slide slide-quadrocopter slide-current">
+              <div class="slide-img">
+                <img class="img" src="img/content/quadrocopter.png" width="526" height="334" alt="Квадрокоптер с лопастями черного цвета и белым базисом">
+              </div>
+              <div class="slide-text">
+                <h3 class="slide-title">Порхает как бабочка, жалит как пчела!</h3>
+                <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен <br> мощным лазером, замаскированным под стандартную камеру.
+                </p>
+                <a class="link btn btn-gradient slide-btn" href="#">Подробнее</a>
+                <table class="slide-table">
+                  <tr>
+                    <td class="slide-table-content">800 м</td>
+                    <td class="slide-table-content">50 м</td>
+                  </tr>
+                  <tr>
+                    <th class="slide-table-title">Дальность полета</th>
+                    <th class="slide-table-title">Радиус поражения</th>
+                  </tr>
+                </table>
+              </div>
+            </li>
+          </ul>
+          <div class="slider-controls">
+            <button class="slider-btn" aria-label="Первый слайд"></button>
+            <button class="slider-btn" aria-label="Второй слайд"></button>
+            <button class="slider-btn slider-btn-active" aria-label="Третий слайд"></button>
+          </div>
+        </div>
       </section>
       <section class="container category">
         <h2 class="visually-hidden">Ассортимент</h2>
@@ -201,25 +191,25 @@
         <div class="container service-container">
           <ul class="reset-list service-nav">
             <li class="services-nav-item">
-              <a class="link btn btn-gradient service-btn" href="#delivery">Доставка</a>
+              <a class="link btn btn-gradient services-nav-link services-nav-btn" href="#delivery">Доставка</a>
             </li>
-            <li class="services-nav-item">
-              <a class="link btn btn-gradient service-btn" href="#guarantee">Гарантия</a>
+            <li class="services-nav-item garanty">
+              <a class="link btn btn-gradient services-nav-link services-nav-btn" href="#guarantee">Гарантия</a>
             </li>
-            <li class="services-nav-item">
-              <a class="link btn btn-gradient services-nav-active-link" href="#credit">Кредит</a>
+            <li class="services-nav-item services-item-active">
+              <a class="link btn btn-gradient services-nav-link services-nav-btn" href="#credit">Кредит</a>
             </li>
           </ul>
           <ul class="reset-list service-content">
             <li class="service-content-item service-content-delivery">
               <h3 class="content-title" id="delivery">Доставка</h3>
-              <p class="content-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <p class="content-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.</p>
             </li>
             <li class="service-content-item service-content-guarantee">
               <h3 class="content-title" id="guarantee">Гарантия</h3>
               <p class="content-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
             </li>
-            <li class="service-content-item service-content-credit">
+            <li class="service-content-item service-content-credit service-content-current">
               <h3 class="content-title" id="credit">Кредит</h3>
               <p class="content-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные <br> условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
@@ -251,7 +241,7 @@
         </ul>
       </section>
       <div class="container info">
-        <section class="about-us">
+        <section class="info-content about-us">
           <h2 class="content-title">О нас</h2>
           <p class="content-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p class="content-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -262,7 +252,7 @@
           </ul>
           <a class="link btn btn-gradient info-btn" href="#">Подробнее о нас</a>
         </section>
-        <section class="contacts">
+        <section class="info-content contacts">
           <h2 class="content-title">Контакты</h2>
           <p class="content-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a class="link contacts-link" href="https://goo.gl/maps/iLd4T67b8KwrvJAH9">
@@ -332,7 +322,7 @@
     </footer>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта офиса</h2>
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acf1d2704160c6f63bd96f2e662ffac92e8ea00b32bbcfde9839a2c5e8445b2bf&amp;source=constructor" width="100%" height="593" frameborder="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.818026615573!2d30.315192316098244!3d59.96834198188698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc4e8ce61%3A0x74d4f0cbfe1fd995!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUg0LrQvtGA0L_Rg9GBINCfLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk3MDIy!5e0!3m2!1sru!2sru!4v1626262043346!5m2!1sru!2sru" width="994" height="593" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <button class="modal-map-close close" type="button" aria-label="Закрыть интерактивную карту">
       <span class="visually-hidden">Закрыть</span>
       </button>
