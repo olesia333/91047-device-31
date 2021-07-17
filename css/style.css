@@ -531,7 +531,7 @@
 
 .slider {
   position: relative;
-  height: 526px;
+  min-height: 526px;
   box-sizing: border-box;
   z-index: 0;
   /*padding-bottom: 20px;*/
@@ -1063,7 +1063,7 @@
 }
 
 .catalog-header .page-title {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   padding-left: 60px;
 }
 
@@ -1256,6 +1256,7 @@
   grid-template-rows: 70px 1fr;
   z-index: 2;
   width: 328px;
+  padding-bottom: 30px;
   padding-right: 68px;
   padding-left: 48px;
   font-size: 14px;
@@ -1372,6 +1373,12 @@
   left: 0;
 }
 
+
+/*.toggle-min:active,
+.toggle-max:active {
+  outline: solid;
+}*/
+
 .range-controls .toggle-max {
   left: 114px;
 }
@@ -1452,6 +1459,12 @@
   border-radius: 50%;
 }
 
+.filter-input:focus+.filter-label,
+.filter-input:focus+.filter-label::before,
+.filter-input:focus+.filter-label::after {
+  opacity: 0.7;
+}
+
 .filter-input:hover+.filter-label {
   opacity: 0.6;
 }
@@ -1470,6 +1483,7 @@
 /*Карточки товаров*/
 
 .catalog {
+  min-height: 1214px;
   padding-top: 69px;
   padding-bottom: 78px;
   display: grid;
@@ -1533,6 +1547,7 @@
   justify-content: center;
   align-items: center;
   background: var(--transparent-gray);
+  box-sizing: border-box;
   visibility: hidden;
   opacity: 0;
 }
@@ -1544,6 +1559,11 @@
 }
 
 .product:hover .product-btn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.product:focus-within .product-btn {
   visibility: visible;
   opacity: 1;
 }
@@ -1596,7 +1616,7 @@
 }
 
 .product-btn-compare:hover,
-.product-btn:focus {
+.product-btn-compare:focus {
   opacity: 1;
 }
 
@@ -1862,8 +1882,10 @@
   grid-column: 5/11;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  padding-top: 33px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 33px;*/
 }
 
 .footer-site-nav-item {
@@ -1874,6 +1896,10 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--basic-white);
+}
+
+.footer-site-nav-item:first-child {
+  padding-left: 30px;
 }
 
 .footer-site-nav-item:not(:first-child) {
@@ -1918,7 +1944,14 @@
 .social-list {
   display: flex;
   justify-content: center;
-  padding-top: 34px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 23px;
+}
+
+.social-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .social-item:not(:last-child) {
@@ -2058,12 +2091,6 @@
   z-index: 6;
 }
 
-.modal-map-close {
-  z-index: 10;
-  top: 29px;
-  right: 29px;
-}
-
 
 /*Форма обратной связи*/
 
@@ -2142,6 +2169,7 @@
 
 .feedback-message {
   min-height: 167px;
+  resize: none;
 }
 
 .feedback-name,
@@ -2178,4 +2206,106 @@
 .feedback-message:invalid {
   background-color: var(--special);
   outline: none;
+}
+
+.modal-map-close {
+  z-index: 10;
+  top: 29px;
+  right: 29px;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+
+/*Animation*/
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0));
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
 }
